@@ -287,7 +287,7 @@
 
         // Configuration
         const MAX_HUNGER = 100;
-        const HUNGER_DECAY_RATE = 4; // per second
+        const HUNGER_DECAY_RATE = 0.5; // per second
         
         class Gecko {
             constructor() {
@@ -358,7 +358,7 @@
                 if ((keys[" "] || keys.dash) && !this.isDashing && this.hunger > 10) {
                     this.isDashing = true;
                     this.dashTime = 0.2; // Dash duration
-                    this.hunger -= 5; // Dash cost
+                    this.hunger -= 2; // Dash cost
                     // Create dash effect
                     createParticles(this.x, this.y, 10, '#fff', 2);
                 }
